@@ -1,4 +1,9 @@
-function ResultCard({ name, score, reason, portfolio, type, location, experience, rating, categories, skills, style_tags, budget_range, platforms }) {
+import { useState } from 'react';
+
+function ResultCard({ name, score, reason, portfolio, type, location, experience, rating, categories, skills, style_tags, budget_range, platforms, semantic_score, onFeedback }) {
+  const [feedback, setFeedback] = useState(null);
+  const [sending, setSending] = useState(false);
+
   const getScoreColor = (score) => {
     if (score >= 8) return 'text-green-600 bg-green-100';
     if (score >= 6) return 'text-blue-600 bg-blue-100';
@@ -19,19 +24,24 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
     }
   };
 
+  const handleFeedback = async (type) => {
+    setSending(true);
+    await onFeedback?.(name, type);
+    setFeedback(type);
+    setSending(false);
+  };
+
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-accent hover:shadow-2xl transition-shadow duration-300 font-sans">
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center">
-          <span className="text-2xl mr-3">{getTypeIcon(type)}</span>
+          <span className="text-3xl mr-4">{getTypeIcon(type)}</span>
           <div>
-            <h2 className="text-xl font-bold text-gray-800">{name}</h2>
-            <p className="text-sm text-gray-600 capitalize">{type} • {location}</p>
+            <h2 className="text-2xl font-extrabold text-bread tracking-tight">{name}</h2>
+            <p className="text-sm text-gray-600 capitalize font-sans">{type}  {location}</p>
           </div>
         </div>
-        <div className={`px-3 py-1 rounded-full text-sm font-bold ${getScoreColor(score)}`}>
-          Score: {score}
-        </div>
+        <div className={`px-4 py-1 rounded-full text-base font-bold ${getScoreColor(score)} font-sans`}>Score: {score}</div>
       </div>
 
       {/* Additional Info */}
@@ -143,8 +153,28 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
           </a>
         </div>
       )}
+
+      {/* Feedback buttons */}
+      <div className="mt-6 flex items-center gap-4">
+        {feedback ? (
+          <span className="text-green-600 font-semibold font-sans">Thank you for your feedback!</span>
+        ) : (
+          <>
+            <button
+              className="px-5 py-2 bg-butter text-bread rounded-full font-bold shadow hover:bg-butter-dark transition disabled:opacity-50 font-sans"
+              disabled={sending}
+              onClick={() => handleFeedback('up')}
+            >👍 Thumbs Up</button>
+            <button
+              className="px-5 py-2 bg-red-100 text-red-700 rounded-full font-bold shadow hover:bg-red-200 transition disabled:opacity-50 font-sans"
+              disabled={sending}
+              onClick={() => handleFeedback('down')}
+            >👎 Thumbs Down</button>
+          </>
+        )}
+      </div>
     </div>
   )
 }
 
-export default ResultCard 
+export default ResultCard; 

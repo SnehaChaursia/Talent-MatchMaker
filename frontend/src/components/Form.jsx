@@ -1,7 +1,7 @@
 function Form({ form, onChange, onSubmit, loading }) {
   return (
     <form className="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 w-full max-w-xl border border-gray-200" onSubmit={onSubmit}>
-      <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Find Your Perfect Match</h2>
+      <h2 className="text-3xl font-extrabold text-bread mb-8 text-center font-sans tracking-tight">Find Your Perfect Match</h2>
       
       {/* Location input */}
       <div className="mb-6">
@@ -12,7 +12,7 @@ function Form({ form, onChange, onSubmit, loading }) {
           name="location"
           value={form.location}
           onChange={onChange}
-          className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded-full w-full py-3 px-4 text-bread leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-butter"
           type="text"
           placeholder="e.g. Mumbai, Goa, Delhi"
           required
@@ -28,7 +28,7 @@ function Form({ form, onChange, onSubmit, loading }) {
           name="skills"
           value={form.skills}
           onChange={onChange}
-          className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded-full w-full py-3 px-4 text-bread leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-butter"
           type="text"
           placeholder="e.g. portrait, wedding, fashion (comma separated)"
           required
@@ -45,7 +45,7 @@ function Form({ form, onChange, onSubmit, loading }) {
           name="budget"
           value={form.budget}
           onChange={onChange}
-          className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded-full w-full py-3 px-4 text-bread leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-butter"
           type="number"
           placeholder="e.g. 75000"
           min="1000"
@@ -62,7 +62,7 @@ function Form({ form, onChange, onSubmit, loading }) {
           name="style"
           value={form.style}
           onChange={onChange}
-          className="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-blue-500"
+          className="shadow appearance-none border rounded-full w-full py-3 px-4 text-bread leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-butter"
           type="text"
           placeholder="e.g. candid, natural, elegant (comma separated)"
           required
@@ -70,8 +70,21 @@ function Form({ form, onChange, onSubmit, loading }) {
         <p className="text-xs text-gray-500 mt-1">Separate multiple styles with commas</p>
       </div>
       
+      {/* Remote creators toggle */}
+      <div className="mb-6 flex items-center">
+        <input
+          id="remote"
+          name="remote"
+          type="checkbox"
+          checked={form.remote || false}
+          onChange={onChange}
+          className="mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+        />
+        <label htmlFor="remote" className="text-gray-700 text-sm font-bold">Show remote creators</label>
+      </div>
+      
       <button
-        className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+        className="w-full bg-butter text-bread font-bold py-3 px-4 rounded-full transition-all duration-200 transform hover:scale-105 hover:bg-butter-dark disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg text-lg font-sans tracking-tight"
         type="submit"
         disabled={loading}
       >
