@@ -83,11 +83,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-accent flex flex-col items-center">
       {/* Top nav bar with Apply Now button */}
-      <div className="w-full flex justify-end items-center py-4 px-8">
-        <button className="bg-butter border-2 border-bread text-bread font-extrabold rounded-full px-6 py-2 shadow hover:bg-butter-dark transition text-lg tracking-tight">
-          APPLY NOW
-        </button>
-      </div>
+     
       <div className="container mx-auto px-4 py-8 flex flex-col items-center">
         {/* Header */}
         <div className="text-center mb-8">
