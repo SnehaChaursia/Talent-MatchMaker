@@ -30,10 +30,10 @@ function Form({ form, onChange, onSubmit, loading }) {
           onChange={onChange}
           className="shadow appearance-none border rounded-full w-full py-3 px-4 text-bread leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-butter"
           type="text"
-          placeholder="e.g. portrait, wedding, fashion (comma separated)"
+          placeholder="e.g. portrait, wedding, fashion"
           required
         />
-        <p className="text-xs text-gray-500 mt-1">Separate multiple skills with commas</p>
+        <p className="text-xs text-gray-500 mt-1">can apply for multiple skills</p>
       </div>
       
       {/* Budget input */}
@@ -64,10 +64,10 @@ function Form({ form, onChange, onSubmit, loading }) {
           onChange={onChange}
           className="shadow appearance-none border rounded-full w-full py-3 px-4 text-bread leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-butter"
           type="text"
-          placeholder="e.g. candid, natural, elegant (comma separated)"
+          placeholder="e.g. candid, natural, elegant "
           required
         />
-        <p className="text-xs text-gray-500 mt-1">Separate multiple styles with commas</p>
+        <p className="text-xs text-gray-500 mt-1">can apply multiple styles</p>
       </div>
       
       {/* Remote creators toggle */}
