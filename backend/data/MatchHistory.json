@@ -3140,5 +3140,32 @@
       "style": "candid",
       "remote": false
     }
+  },
+  {
+    "timestamp": "2025-07-16T05:14:50.821Z",
+    "requirements": {
+      "location": "Bengaluru",
+      "skills": [
+        "wedding"
+      ],
+      "budget": 85555,
+      "style": [
+        "candid"
+      ]
+    },
+    "matches": [
+      {
+        "name": "Rachel Powell",
+        "score": 4
+      },
+      {
+        "name": "Deborah Wong",
+        "score": 4
+      },
+      {
+        "name": "Michael Guerrero",
+        "score": 4
+      }
+    ]
   }
 ]
