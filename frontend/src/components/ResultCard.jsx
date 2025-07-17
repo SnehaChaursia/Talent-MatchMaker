@@ -32,7 +32,7 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-accent hover:shadow-2xl transition-shadow duration-300 font-sans">
+    <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border border-accent card-hover font-sans">
       <div className="flex justify-between items-start mb-4">
         <div className="flex items-center">
           <span className="text-3xl mr-4">{getTypeIcon(type)}</span>
@@ -44,7 +44,6 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         <div className={`px-4 py-1 rounded-full text-base font-bold ${getScoreColor(score)} font-sans`}>Score: {score}</div>
       </div>
 
-      {/* Additional Info */}
       <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
         <div className="flex items-center">
           <span className="text-gray-500 mr-2">Experience:</span>
@@ -56,7 +55,6 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         </div>
       </div>
 
-      {/* Categories and Skills */}
       {categories && categories.length > 0 && (
         <div className="mb-4">
           <h3 className="font-semibold text-gray-700 mb-2">Categories</h3>
@@ -83,7 +81,6 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         </div>
       )}
 
-      {/* Budget Range */}
       {budget_range && (
         <div className="mb-4">
           <h3 className="font-semibold text-gray-700 mb-2">Budget Range</h3>
@@ -91,7 +88,6 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         </div>
       )}
 
-      {/* Matching Details */}
       <div className="mb-4">
         <h3 className="font-semibold text-gray-700 mb-2">Why this match?</h3>
         <div className="space-y-2">
@@ -122,7 +118,6 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         </div>
       </div>
 
-      {/* Platforms */}
       {platforms && platforms.length > 0 && (
         <div className="mb-4">
           <h3 className="font-semibold text-gray-700 mb-2">Platforms</h3>
@@ -136,7 +131,6 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         </div>
       )}
 
-      {/* Portfolio Link */}
       {portfolio && (
         <div className="border-t pt-4">
           <a 
@@ -154,22 +148,41 @@ function ResultCard({ name, score, reason, portfolio, type, location, experience
         </div>
       )}
 
-      {/* Feedback buttons */}
       <div className="mt-6 flex items-center gap-4">
         {feedback ? (
           <span className="text-green-600 font-semibold font-sans">Thank you for your feedback!</span>
         ) : (
           <>
             <button
-              className="px-5 py-2 bg-butter text-bread rounded-full font-bold shadow hover:bg-butter-dark transition disabled:opacity-50 font-sans"
+              className="button-small"
+              style={{ 
+                width: '120px', 
+                height: '40px', 
+                lineHeight: '40px', 
+                fontSize: '0.875rem',
+                backgroundColor: '#FFD600',
+                color: '#181818'
+              }}
               disabled={sending}
               onClick={() => handleFeedback('up')}
-            >👍 Thumbs Up</button>
+            >
+              👍 Thumbs Up
+            </button>
             <button
-              className="px-5 py-2 bg-red-100 text-red-700 rounded-full font-bold shadow hover:bg-red-200 transition disabled:opacity-50 font-sans"
+              className="button-small"
+              style={{ 
+                width: '140px', 
+                height: '40px', 
+                lineHeight: '40px', 
+                fontSize: '0.875rem',
+                backgroundColor: '#FEE2E2',
+                color: '#DC2626'
+              }}
               disabled={sending}
               onClick={() => handleFeedback('down')}
-            >👎 Thumbs Down</button>
+            >
+              👎 Thumbs Down
+            </button>
           </>
         )}
       </div>

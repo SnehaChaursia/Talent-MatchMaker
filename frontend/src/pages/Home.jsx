@@ -2,23 +2,20 @@ import { useState, useEffect } from 'react'
 import Form from '../components/Form.jsx'
 import ResultCard from '../components/ResultCard.jsx'
 
-// Add Google Fonts for DM Serif Display (optional, for title)
 function Home() {
   const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
   const [feedbacks, setFeedbacks] = useState([])
 
-  // Form state
   const [form, setForm] = useState({
     location: '',
-    skills: '', // comma separated
+    skills: '',
     budget: '',
-    style: '', // comma separated
+    style: '',
     remote: false,
   })
 
-  // Fetch feedbacks on mount
   useEffect(() => {
     fetch('/api/feedback')
       .then(res => res.json())
@@ -40,7 +37,6 @@ function Home() {
     setError("")
     setResults([])
     try {
-      // Prepare payload
       const payload = {
         location: form.location,
         skills: form.skills.split(',').map(s => s.trim()).filter(Boolean),
@@ -48,7 +44,6 @@ function Home() {
         style: form.style.split(',').map(s => s.trim()).filter(Boolean),
         remote: form.remote,
       }
-      // Call backend
       const res = await fetch('/api/match', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -64,7 +59,6 @@ function Home() {
     }
   }
 
-  // Feedback handler
   const handleFeedback = async (match_name, feedback) => {
     try {
       await fetch('/api/feedback', {
@@ -72,7 +66,6 @@ function Home() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ match_name, feedback, requirements: form })
       })
-      // Optionally, refresh feedbacks
       fetch('/api/feedback')
         .then(res => res.json())
         .then(setFeedbacks)
@@ -82,10 +75,7 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-accent flex flex-col items-center">
-      {/* Top nav bar with Apply Now button */}
-     
       <div className="container mx-auto px-4 py-8 flex flex-col items-center">
-        {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-5xl font-extrabold text-bread mb-4 tracking-tight" style={{ fontFamily: 'DM Serif Display, Poppins, serif' }}>
             Top talent available on Bread Butter
@@ -95,14 +85,11 @@ function Home() {
           </p>
         </div>
 
-        {/* Main Content: Form and Results */}
         <div className="w-full flex flex-col items-center gap-8">
-          {/* Form Section */}
           <div className="w-full max-w-xl mb-8">
             <Form form={form} onChange={handleChange} onSubmit={handleSubmit} loading={loading} />
           </div>
 
-          {/* Results Section: Centered grid */}
           <div className="w-full">
             <h2 className="text-2xl font-bold text-bread mb-6 text-center">Your Matches</h2>
             {error && (
@@ -129,7 +116,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Feedback Section */}
         <div className="max-w-2xl mx-auto mt-12 bg-white rounded-lg shadow p-6">
           <h2 className="text-lg font-bold mb-4 text-bread text-center">Recent Feedback</h2>
           {feedbacks.length === 0 ? (
@@ -149,7 +135,6 @@ function Home() {
           )}
         </div>
 
-        {/* Footer */}
         <div className="text-center mt-12 text-gray-500 text-sm">
           <p>Built for BreadButter • Talent Matchmaker Lite</p>
         </div>
