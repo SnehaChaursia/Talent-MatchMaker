@@ -3,8 +3,6 @@
 A modern talent matching platform for creative professionals. Find and hire the best photographers, videographers, stylists, and other creative talents for your projects.
 ---
 
-## 📹 Demo & Submission Links
-
 ## 🔗 Project Resources
 
 - 📽 **[Video Demo](https://drive.google.com/file/d/15yyF3fOJliQaLfz3qpLD6O52f5wzsWzd/view?usp=sharing)**  
