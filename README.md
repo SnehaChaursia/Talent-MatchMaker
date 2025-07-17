@@ -1,13 +1,20 @@
-# Talent Matchmaker Lite
+# Talent Matchmaker 
 
 A modern talent matching platform for creative professionals. Find and hire the best photographers, videographers, stylists, and other creative talents for your projects.
 ---
 
 ## 📹 Demo & Submission Links
 
-- **Video Demo:** https://drive.google.com/file/d/15yyF3fOJliQaLfz3qpLD6O52f5wzsWzd/view?usp=sharing
-- **Live Project (Deployed App):** https://talent-matchmaker-24l2.onrender.com/
-- **Proposal/Submission Document:** https://docs.google.com/document/d/16c9YpbQnaXELGEk160mFWYwtRozefCezk4k_ogG7fbo/edit?usp=sharing
+## 🔗 Project Resources
+
+- 📽 **[Video Demo](https://drive.google.com/file/d/15yyF3fOJliQaLfz3qpLD6O52f5wzsWzd/view?usp=sharing)**  
+  A quick walkthrough showcasing core features and functionality.
+
+- 🚀 **[Live App](https://talent-matchmaker-24l2.onrender.com/)**  
+  Explore the fully deployed application.
+
+- 📄 **[Submission Proposal](https://docs.google.com/document/d/16c9YpbQnaXELGEk160mFWYwtRozefCezk4k_ogG7fbo/edit?usp=sharing)**  
+  Detailed architecture, tech stack, approach, and implementation notes.
 
 ---
 
@@ -32,7 +39,7 @@ A modern talent matching platform for creative professionals. Find and hire the 
 1. Clone the repository
    ```bash
    git clone <your-repo-url>
-   cd Talent-MatchMaker-Lite
+   cd Talent-MatchMaker
    ```
 
 2. Install all dependencies
