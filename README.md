@@ -6,8 +6,8 @@ A modern talent matching platform for creative professionals. Find and hire the 
 ## 📹 Demo & Submission Links
 
 - **Video Demo:** 
-- **Live Project (Deployed App):**
-- **Proposal/Submission Document:** 
+- **Live Project (Deployed App):** https://talent-matchmaker-24l2.onrender.com/
+- **Proposal/Submission Document:** https://docs.google.com/document/d/16c9YpbQnaXELGEk160mFWYwtRozefCezk4k_ogG7fbo/edit?usp=sharing
 
 ---
 
@@ -15,8 +15,7 @@ A modern talent matching platform for creative professionals. Find and hire the 
 
 - Smart matching based on location, skills, budget, and style preferences
 - Real-time search with detailed scoring breakdown
-- Portfolio integration with direct access to creator platforms
-- Feedback system for rating matches
+- Feedback system for rating matchesintegration with direct access to creator platforms
 - Responsive design that works on all devices
 - Location autocomplete with city suggestions
 - Skills and style suggestions for easy selection
