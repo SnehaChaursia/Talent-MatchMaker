@@ -5,7 +5,7 @@ A modern talent matching platform for creative professionals. Find and hire the 
 
 ## 📹 Demo & Submission Links
 
-- **Video Demo:** 
+- **Video Demo:** https://drive.google.com/file/d/15yyF3fOJliQaLfz3qpLD6O52f5wzsWzd/view?usp=sharing
 - **Live Project (Deployed App):** https://talent-matchmaker-24l2.onrender.com/
 - **Proposal/Submission Document:** https://docs.google.com/document/d/16c9YpbQnaXELGEk160mFWYwtRozefCezk4k_ogG7fbo/edit?usp=sharing
 
