@@ -101,6 +101,12 @@ Talent-MatchMaker-Lite/
 - `GET /api/health` - Health check
 - `GET /api/feedback` - Get feedback
 - `POST /api/feedback` - Submit feedback
+<img width="800" height="800" alt="Screenshot from 2025-07-19 05-05-12" src="https://github.com/user-attachments/assets/eb124f99-3122-4315-b8d6-a247f1a5c53a" />
+<img width="800" height="800" alt="Screenshot from 2025-07-19 05-07-01" src="https://github.com/user-attachments/assets/03fb59e4-64bf-4a88-bf69-c8df01c2b959" />
+<img width="800" height="800" alt="Screenshot from 2025-07-19 05-07-38" src="https://github.com/user-attachments/assets/617de268-01d8-424f-a1a1-243ae13592cf" />
+<img width="800" height="800" alt="Screenshot from 2025-07-19 05-07-55" src="https://github.com/user-attachments/assets/64481e0e-d104-49f9-9e38-c95667f60cc8" />
+<img width="800" height="800" alt="Screenshot from 2025-07-19 05-08-41" src="https://github.com/user-attachments/assets/5c94e6df-67ab-4400-87b6-dbc8f1ee2330" />
+
 
 ## Data Structure
 
