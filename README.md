@@ -22,7 +22,7 @@ A modern talent matching platform for creative professionals. Find and hire the 
 - Real-time search with detailed scoring breakdown
 - Feedback system for rating matchesintegration with direct access to creator platforms
 - Responsive design that works on all devices
-- Location autocomplete with city suggestions
+- Location autocomplete with city suggestions and skill
 - Skills and style suggestions for easy selection
 
 ## Quick Start
