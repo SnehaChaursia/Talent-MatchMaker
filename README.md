@@ -117,5 +117,5 @@ The app uses JSON files for data storage:
 - `backend/data/MatchHistory.json` - Match history
 
 
-Thank you for reading it.
+Thank you for reading it..
 ❤️ Sneha Chaurasia
